@@ -1,0 +1,127 @@
+/*!
+ * Start Bootstrap - Shop Homepage HTML Template (http://startbootstrap.com)
+ * Code licensed under the Apache License v2.0.
+ * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ */
+
+/*--- slide images ---*/
+ .item {
+     height: 250px;
+ }
+     .slide-img {
+         width: 100%;
+     }
+
+
+/*--- contact info---*/
+.contact-info {
+    height: 250px;
+    padding: 10px;
+    margin-right: 10px;
+    background-color: white;
+    text-align: center;
+}
+
+    .image-container {
+        width: 100%;
+    }
+
+    .image-container img {
+        width: 70%;
+        margin-bottom: 5px;
+    }
+
+    .contact-info p {
+        font-size: 16px;
+    }
+
+
+.product-box-col {
+    padding: 0;
+}
+
+.product-box {
+    border-radius: 5px;
+    background-color: white;
+    margin-right: 10px;
+    margin-top: 10px;
+    box-shadow: 4px 4px 4px #D9D9D9;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+    .product-box p {
+        margin: 0;
+        padding-bottom: 2px;
+    }
+
+    .product-img {
+        width: 100%;
+        border-top-right-radius: 5px;
+        border-top-left-radius: 5px;
+    }
+
+    .product-name {
+        margin-bottom: 0;
+        padding-left: 10px;
+        font-size: 17px;
+    }
+
+    .product-id, .product-view {
+        float: right;
+        padding-right: 10px;
+        color: grey;
+    }
+
+    .product-price {
+        padding-left: 10px;
+        font-size: 14px;
+        color: grey;
+    }
+
+.title-1 p {
+    font-size: 18px;
+    color: grey;
+    margin-bottom: 0px;
+    padding-top: 30px;
+}
+
+.title-2 p {
+    font-size: 15px;
+    color: grey;
+    padding-left: 10px;
+    margin-top: 13px;
+}
+
+    .title-2 a {
+        color: #548CCB;
+        padding-left: 20px;
+    }
+
+.category-box-col {
+    padding: 0px;
+    padding-right: 15px;
+}
+
+.category-box {
+    border-radius: 5px;
+    background-color: white;
+    padding-left: 10px;
+    padding-bottom: 20px;
+    box-shadow: 2px 2px 2px #D9D9D9;
+}
+
+    .category-box p {
+        margin-bottom: 3px;
+    }
+
+    .category-box .level2 {
+        font-weight: normal;
+        font-size: 18px;
+        padding-top: 20px;
+        color: #B3B3B3;
+    }
+
+    .category-box .level1 {
+        font-size: 13px;
+        color: #548CCB;
+    }

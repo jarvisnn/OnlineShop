@@ -1,0 +1,158 @@
+/*!
+ * Start Bootstrap - Shop Homepage HTML Template (http://startbootstrap.com)
+ * Code licensed under the Apache License v2.0.
+ * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ */
+
+ body {
+     padding-top: 70px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+     background-color: #F2F2F2;
+     background-image: url("/static/background.png");
+     font-family: 'Source Sans Pro', sans-serif;
+ }
+
+.web-nav {
+    background-color: white;
+    border-bottom: 1px solid #D9D9D9;
+}
+
+.carousel-holder {
+    margin-bottom: 30px;
+}
+
+.carousel-control, .item {
+    border-radius: 4px;
+}
+
+.caption {
+    height: 130px;
+    overflow: hidden;
+}
+
+.caption h4 {
+    white-space: nowrap;
+}
+
+.thumbnail img {
+    width: 100%;
+}
+
+.ratings {
+    padding-right: 10px;
+    padding-left: 10px;
+    color: #d17581;
+}
+
+.thumbnail {
+    padding: 0;
+}
+
+.thumbnail .caption-full {
+    padding: 9px;
+    color: #333;
+}
+
+footer {
+    margin: 50px 0;
+}
+
+.slide-images, .search-function {
+    /*display: none;*/
+}
+
+#header-link:hover{
+    color: #358CFC;
+}
+
+/*--- cart ---*/
+.cart {
+    float: right;
+    width: 50px;
+    margin-left: 20px;
+}
+
+    .cart img {
+        width: 100%;
+    }
+
+    .cart span {
+        margin-top: 4px;
+        margin-left: 18px;
+        position: absolute;
+        background-color: red;
+    }
+
+    .cart #badge {
+        display: none;
+    }
+
+/*--- search function ---*/
+.search-function {
+    padding-top: 7.5px;
+    width: 31%;
+    float: right;
+
+}
+
+    #basic-addon1 {
+        position: relative;
+        top: 0px;
+        color: white;
+        background-color: #358CFC;
+    }
+
+    #basic-addon1:hover {
+        background-color: #1363CD;
+    }
+
+    .search-function input {
+        background-color: #FAFAFA;
+    }
+
+/* Additional col 1/5 */
+.col-xs-15, .col-sm-15, .col-md-15, .col-lg-15 {
+    position: relative;
+    min-height: 1px;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.col-xs-15 {
+    width: 20%;
+    float: left;
+}
+
+#sliding-images {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .col-sm-15 {
+        width: 20%;
+        float: left;
+    }
+}
+@media (min-width: 992px) {
+    .col-md-15 {
+        width: 20%;
+        float: left;
+    }
+    #sliding-images {
+        display: block;
+    }
+}
+@media (min-width: 1200px) {
+    .col-lg-15 {
+        width: 20%;
+        float: left;
+    }
+}
+
+@media (max-width: 768px) {
+    #header-link {
+        display: none;
+    }
+    .search-function {
+        width: 75%;
+    }
+}

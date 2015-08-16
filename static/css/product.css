@@ -1,0 +1,45 @@
+.slide-image {
+    width: 100%;
+    height: auto;
+}
+
+/*--- product box ---*/
+.product-info-box {
+    border-radius: 5px;
+    background-color: white;
+    padding: 25px;
+}
+
+    .product-info h3 {
+        margin-top: 10px;
+        margin-bottom: 20px;
+        font-size: 35px;
+    }
+
+    .product-info span {
+        margin-right: 20px;
+        font-size: 15px;
+    }
+
+    .product-info p {
+        font-size: 15px;
+    }
+
+    .prt-button {
+        padding: 10px;
+        font-size: 15px;
+    }
+
+
+/*--- ---*/
+.product-additional-info {
+    margin-top: 10px;
+}
+    .tab-header {
+        font-size: 17px;
+    }
+
+    .product-description {
+        padding: 16px;
+        font-size: 16px;
+    }
