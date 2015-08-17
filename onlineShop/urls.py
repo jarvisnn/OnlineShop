@@ -19,6 +19,7 @@ from django.conf import settings
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^', include('products.urls')),
     url(r'^products/', include('products.urls')),
     url(r'^orders/', include('orders.urls')),
     url(r'^media/(?P<path>.*)$', 'django.views.static.serve',

@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '#)9oq*gr+^9m^wsjdrx3+!svtf2lu(xa_o$hvse^)s)3$rpn5i'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['.mebecun.com','.127.0.0.1','mebecun.com',]
 
 
 # Application definition
@@ -80,9 +80,9 @@ WSGI_APPLICATION = 'onlineShop.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'testingdb',
-        'USER': 'testingdb',
-        'PASSWORD': '',
+        'NAME': 'onlineshop',
+        'USER': 'kunn',
+        'PASSWORD': '12345678',
         'HOST': 'localhost',
         'PORT': '5432',
     }
