@@ -74,6 +74,7 @@ footer {
     .home-button {
         display: inline;
         font-size: 25px;
+	color: #4B6B9E;
     }
 
 /*--- cart ---*/
@@ -138,11 +139,31 @@ footer {
     display: none;
 }
 
+@media (max-width: 768px) {
+    .title-header {
+        width: 20%;
+    }
+    #header-link {
+        width: 50%;
+        margin-left: -10px;
+    }
+    #header-link img {
+        display: none;
+    }
+    .facebook-icon {
+        width: 50%;
+    }
+    .search-function {
+        width: 50%;
+    }
+}
+
 @media (min-width: 768px) {
     .col-sm-15 {
         width: 20%;
         float: left;
     }
+
 }
 @media (min-width: 992px) {
     .col-md-15 {
@@ -157,14 +178,5 @@ footer {
     .col-lg-15 {
         width: 20%;
         float: left;
-    }
-}
-
-@media (max-width: 768px) {
-    #header-link {
-        display: none;
-    }
-    .search-function {
-        width: 75%;
     }
 }

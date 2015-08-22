@@ -12,4 +12,10 @@ class Order(models.Model):
     status = models.CharField(max_length=200)
 
     def __str__(self):
-        return '[status: '+ str(self.status) + ']' + 'id: ' + str(self.id) + '; name: ' + str(self.customer);
+        return '[status: '+ str(self.status) + '] ' +\
+            'id:' + str(self.id) +\
+            '___name:' + str(self.customer) +\
+            '___products:' + str(self.products) +\
+            '___note:' + str(self.note) +\
+            '___phone:' + str(self.phoneNumber) +\
+            '___address:' + str(self.address);

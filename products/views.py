@@ -9,7 +9,7 @@ def index(request):
         list2 = {}
         for category in categoryLevel2.category_set.all():
             if len(category.product_set.all()) > 0:
-                list2[category] = category.product_set.order_by('-view').all()[:5]
+                list2[category] = category.product_set.order_by('-id').all()[:25]
 
         if len(list2) != 0:
             list1[categoryLevel2] = list2
@@ -36,7 +36,7 @@ def getProductWithCategory(request, category_id):
     categoryLevel2 = category.upperCategory
 
     if len(category.product_set.all()) > 0:
-        list2[category] = category.product_set.all()
+        list2[category] = category.product_set.order_by('-id').all()
     if len(list2) != 0:
         list1[categoryLevel2] = list2
 

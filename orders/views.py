@@ -6,15 +6,18 @@ from orders.models import *
 
 
 def index(request):
+    order = None
 
     if request.method == 'POST':
         order = Order(phoneNumber=request.POST['phone'],address=request.POST['address'],
             customer=request.POST['name'], products=request.POST['products'],
             note=request.POST['note'], status='processing', price=request.POST['cost'])
-        order.save()
-        return render(request, 'orders/order.html', {
-            'thankyou': True,
-        })
+
+        if order.customer != '' and order.phoneNumber != '' and order.address != '' and order.note != '':
+            order.save()
+            return render(request, 'orders/order.html', {
+                'thankyou': True,
+            })
 
     if "items" in request.COOKIES:
         itemList = request.COOKIES["items"].split("-")
@@ -22,9 +25,11 @@ def index(request):
 
         for item in itemList:
             if item.isdigit():
-                productList.append(Product.objects.filter(id=int(item))[0])
+                list = Product.objects.filter(id=int(item))
+                if (len(list) > 0):
+                    productList.append(list[0])
         return render(request, 'orders/order.html', {
-            'products': productList,
+            'products': productList, 'order': order,
         })
     else:
-        return render(request, 'orders/order.html')
+        return render(request, 'orders/order.html', { 'order': order, })

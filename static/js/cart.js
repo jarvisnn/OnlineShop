@@ -16,6 +16,11 @@ function getCookie(cname) {
     return "";
 }
 
+function resetCookie() {
+    setCookie('items', '', 1000);
+    setCookie('numberOfItems', '', 1000);
+}
+
 function addNewItem(id) {
     if (getCookie("items").indexOf('-'+id+'-') == -1) {
         if (getCookie("numberOfItems") == "NaN" || getCookie("numberOfItems") == "") {
@@ -31,7 +36,7 @@ function addNewItem(id) {
 function deleteItem(id) {
     var items = getCookie("items");
     if (items.indexOf('-' + id + '-') != -1) {
-        setCookie("items", '-' + items.replace('-' + id + '-', ''),1000)
+        setCookie("items",  items.replace('-' + id + '-', ''),1000)
         setCookie("numberOfItems", parseInt(getCookie("numberOfItems")) - 1, 1000)
     }
     location.reload();
@@ -57,7 +62,7 @@ function increaseSL(id) {
 function decreaseSL(id) {
     var key = 'sl-' + id;
     var value = parseInt($('#'+key).text());
-    value = Math.max(value-1, 0);
+    value = Math.max(value-1, 1);
     $('#'+key).text(value);
     refreshCost();
 }
@@ -69,7 +74,11 @@ function refreshCost() {
 
     for (var i in list) {
         var id=list[i];
-        if (id != '') {
+	if ($('#price-'+id).length == 0) {
+	    if (id != '') {
+		deleteItem(id);
+            }
+	} else {
             cost += parseFloat($('#price-'+id).text().replace(',','')) * parseFloat($('#sl-'+id).text());
         }
     }
@@ -79,7 +88,9 @@ function refreshCost() {
 
 $(document).ready(function() {
     refreshCart();
-    refreshCost();
+    if ($('#total-cost').length != 0) {
+        refreshCost();
+    }
 });
 
 $('#order-form').on('submit', function(event) {
@@ -92,14 +103,12 @@ $('#order-form').on('submit', function(event) {
     for (var i in list) {
         var id=list[i];
         if (id != '') {
-            value += '{mã sản phẩm:' + id + ', số lượng: '+ $('#sl-'+id).text() + '} ;';
+            value += '[' + id + '-' + $('#product-name-'+id).text() + '-slượng '+ $('#sl-'+id).text() + '] ';
         }
     }
 
     $('#order-products').val(value);
     $('#cost').val($('#total-cost').text().replace(',',''));
-    setCookie('items', '', 1000);
-    setCookie('numberOfItems', '', 1000);
     this.submit();
 });
 
