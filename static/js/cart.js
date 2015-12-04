@@ -91,6 +91,9 @@ $(document).ready(function() {
     if ($('#total-cost').length != 0) {
         refreshCost();
     }
+    $(".product-img").each(function() {
+        $(this).height($(this).width());
+    });
 });
 
 $('#order-form').on('submit', function(event) {

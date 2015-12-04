@@ -7,7 +7,7 @@ def index(request):
     list1 = {}
     for categoryLevel2 in CategoryLevel2.objects.all():
         list2 = {}
-        for category in categoryLevel2.category_set.all():
+        for category in categoryLevel2.category_set.order_by('-id').all():
             if len(category.product_set.all()) > 0:
                 list2[category] = category.product_set.order_by('-id').all()[:25]
 
