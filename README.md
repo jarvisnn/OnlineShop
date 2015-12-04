@@ -22,11 +22,11 @@ Host mebecun
 ``
 
 repo
-``
+`` 
 git add remote production ubuntu@peer-review:{reponame}/
 ``
 
 deploying
 ``
 git push production master
-``
+`` 
