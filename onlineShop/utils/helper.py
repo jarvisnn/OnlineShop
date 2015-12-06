@@ -49,7 +49,7 @@ def createAlbum(product):
 
 def extractImage(caption, image, albumId):
     # url = 'http://www.keenthemes.com/preview/metronic/theme/assets/global/plugins/jcrop/demos/demo_files/image1.jpg'
-    url = settings.ROOT_URL + 'media/' + image
+    url = settings.ROOT_URL + 'media/' + str(image)
     if not image:
         return ''
     else:
