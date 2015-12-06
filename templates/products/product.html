@@ -27,7 +27,7 @@
 
                         {% for image in images %}
                         <div class="item">
-                            <img class="slide-image" src="/media/{{image.image}}" alt="">
+                            <img class="slide-image" src="/media/{{image}}" alt="">
                         </div>
                         {% endfor %}
 
@@ -57,6 +57,8 @@
                             <span class="glyphicon glyphicon-eye-open"></span>
                             {{product.view}} lượt xem
                         </p>
+
+                        <div class="fb-like fb-like-product" data-href="http://mebecun.com/products/{{product.id}}" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
 
                         <a class="prt-button btn btn-success btn-cta btn-block"
                             onclick="addNewItem({{product.id}})">Thêm vào giỏ hàng</a>

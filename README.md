@@ -11,10 +11,16 @@ Website for shopping
 psql -h localhost -d onlineshop -U kunn -W
 ``
 
+### Additional modules
+- Pillow + Requests
+```
+pip install Pillow
+pip install Requests
+```
+
 ### Deployment Setup
 
 Setup ~/.ssh/config
-
 ```
 Host mebecun
   HostName ec2-52-76-35-183.ap-southeast-1.compute.amazonaws.com

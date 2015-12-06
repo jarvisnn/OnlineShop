@@ -80,9 +80,9 @@ WSGI_APPLICATION = 'onlineShop.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'onlineshop',
-        'USER': 'kunn',
-        'PASSWORD': '12345678',
+        'NAME': '',
+        'USER': '',
+        'PASSWORD': '',
         'HOST': 'localhost',
         'PORT': '5432',
     }
@@ -115,3 +115,9 @@ MEDIA_URL = '/media/'
 MEDIAFILES_DIRS = (
     os.path.join(BASE_DIR, 'media'),
 )
+
+# Environment Variables
+FB_ACCESS_KEY = ''
+FB_URL = 'https://graph.facebook.com/'
+FB_V5 = 'https://graph.facebook.com/v2.5/'
+ROOT_URL = 'http://mebecun.com/'

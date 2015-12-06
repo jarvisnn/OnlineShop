@@ -29,7 +29,12 @@ class Product(models.Model):
     description = models.TextField()
     price = models.FloatField(default=0)
     view = models.IntegerField(default=0)
-    avatar = models.ImageField(upload_to=get_image_path, null=True)
+    avatar = models.ImageField(upload_to=get_image_path, null=True, default=None)
+    image1 = models.ImageField(upload_to=get_image_path, null=True, blank=True, default=None)
+    image2 = models.ImageField(upload_to=get_image_path, null=True, blank=True, default=None)
+    image3 = models.ImageField(upload_to=get_image_path, null=True, blank=True, default=None)
+    image4 = models.ImageField(upload_to=get_image_path, null=True, blank=True, default=None)
+    image5 = models.ImageField(upload_to=get_image_path, null=True, blank=True, default=None)
 
     def __str__(self):
         return "[ID: " + str(self.id) + "] " + self.name

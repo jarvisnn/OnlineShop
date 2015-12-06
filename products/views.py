@@ -19,6 +19,7 @@ def index(request):
         'slideImages': SlideImage.objects.all(),
     })
 
+
 def getProductWithCategory(request, category_id):
 
     categories = Category.objects.filter(id=int(category_id))
@@ -46,7 +47,6 @@ def getProductWithCategory(request, category_id):
     })
 
 
-
 def getProduct(request, product_id):
     products = Product.objects.filter(id=int(product_id))
     if len(products) == 0:
@@ -56,9 +56,24 @@ def getProduct(request, product_id):
     else:
         products[0].view += 1
         products[0].save()
+
+        images = []
+        if products[0].image1:
+            images.append(products[0].image1)
+        if products[0].image2:
+            images.append(products[0].image2)
+        if products[0].image3:
+            images.append(products[0].image3)
+        if products[0].image4:
+            images.append(products[0].image4)
+        if products[0].image5:
+            images.append(products[0].image5)
+        for img in products[0].image_set.all():
+            images.append(img.image)
+
         return render(request, 'products/product.html', {
             'category': CategoryLevel2.objects.all(), 'product': products[0],
-            'images': products[0].image_set.all(),
+            'images': images,
         })
 
 
@@ -87,6 +102,7 @@ def search(request):
         'keyword': keyword,
         'slideImages': SlideImage.objects.all(),
     })
+
 
 def makeOrders(request):
     return render(request, 'products/order.html')
