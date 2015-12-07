@@ -68,7 +68,7 @@
         </div>
 
         <div class="row">
-            <div class="col-md-2 col-sm-12 col-xs-12 category-box-col">
+            <div class="col-md-25 col-sm-12 col-xs-12 category-box-col">
                 <div class="category-box">
                 {% for categoryL2 in category %}
                     <p class="level2">{{categoryL2.name}}</p>
@@ -76,11 +76,11 @@
                         <a href="/products/category/{{categoryL1.id}}" class="level1">{{categoryL1.name}}</p></a>
                     {% endfor %}
                 {% endfor %}
-                    <div class="fb-like-index fb-like" data-href="http://mebecun.com" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
+                    <div class="fb-page fb-page-index" data-href="https://www.facebook.com/mebecunn" data-tabs="timeline" data-width="100%" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/mebecunn"><a href="https://www.facebook.com/mebecunn">Quần áo Trẻ em</a></blockquote></div></div>
                 </div>
             </div>
 
-            <div class="col-md-10 col-sm-12 col-xs-12 product-container">
+            <div class="col-md-95 col-sm-12 col-xs-12 product-container">
                 {% if data %}
                     {% for categoryLevel2, list in data.items %}
                         <div class="row title-1">

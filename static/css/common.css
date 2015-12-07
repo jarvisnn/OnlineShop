@@ -123,7 +123,7 @@ footer {
     }
 
 /* Additional col 1/5 */
-.col-xs-15, .col-sm-15, .col-md-15, .col-lg-15 {
+.col-xs-15, .col-sm-15, .col-md-15, .col-lg-15, .col-xs-25, .col-sm-25, .col-md-25, .col-lg-95, .col-xs-95, .col-sm-95, .col-md-95, .col-lg-95  {
     position: relative;
     min-height: 1px;
     padding-right: 10px;
@@ -132,6 +132,14 @@ footer {
 
 .col-xs-15 {
     width: 20%;
+    float: left;
+}
+.col-xs-25 {
+    width: 20.83%;
+    float: left;
+}
+.col-xs-95 {
+    width: 79.17%;
     float: left;
 }
 
@@ -163,11 +171,27 @@ footer {
         width: 20%;
         float: left;
     }
+    .col-sm-25 {
+        width: 23%;
+        float: left;
+    }
+    .col-sm-95 {
+        width: 77%;
+        float: left;
+    }
 
 }
 @media (min-width: 992px) {
     .col-md-15 {
         width: 20%;
+        float: left;
+    }
+    .col-md-25 {
+        width: 23%;
+        float: left;
+    }
+    .col-md-95 {
+        width: 77%;
         float: left;
     }
     #sliding-images {
@@ -177,6 +201,14 @@ footer {
 @media (min-width: 1200px) {
     .col-lg-15 {
         width: 20%;
+        float: left;
+    }
+    .col-lg-25 {
+        width: 20.83%;
+        float: left;
+    }
+    .col-lg-95 {
+        width: 79.17%;
         float: left;
     }
 }
