@@ -12,7 +12,7 @@ def publishToFacebook(product):
 
     albumId = json.loads(album)['id']
     access_token = settings.FB_ACCESS_KEY
-    caption = product.name + '\\r\\n Giá: ' + str(int(product.price)) + ' vnd' + '\\r\\n\\r\\n' + product.description
+    caption = product.name + '\\r\\n Giá: ' + str(int(product.price)) + ' vnd' + '\\r\\n\\r\\n' + product.description.replace('\r\n', '\\r\\n')
     caption += '\\r\\n\\r\\n Đặt mua tại: ' + settings.ROOT_URL + '/products/' + str(product.id)
 
     batch = '['
